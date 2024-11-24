@@ -8,7 +8,7 @@ public class A_RS2_CDS_OpportunityUpdateUtilityTest
      Id devRecordTypeforAccount = Schema.SObjectType.account.getRecordTypeInfosByName().get('End Customer').getRecordTypeId(); 
      
      Account Acc = new Account(Name='Test1',partner_id__c = '123456',Partner_Type__c ='test PDS',RecordTypeId = devRecordTypeforAccount);
-     Insert Acc;
+     //Insert Acc;
     
     List<Opportunity> oppList=new List<Opportunity>();
       opportunity opp = new Opportunity(Name='Test1Opp',amount =146.00,Parent_Consolidated__c = true,StageName='03-Validate',accountId=acc.id,closedate=mydate,CurrencyIsoCode= 'USD');
@@ -45,7 +45,7 @@ public class A_RS2_CDS_OpportunityUpdateUtilityTest
      
 
    public static testMethod void testOppUpdateUtility1()
-   {
+   
    RS2_OpportunityUpdate.RS2_OpportunityRequestInfo OppRequestInfo = new RS2_OpportunityUpdate.RS2_OpportunityRequestInfo();
      Date mydate = Date.valueOf(system.today());
      Id devRecordTypeforAccount = Schema.SObjectType.account.getRecordTypeInfosByName().get('End Customer').getRecordTypeId(); 
