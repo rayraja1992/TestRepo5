@@ -24,7 +24,6 @@ public class A_RS2_CDS_OpportunityUpdateUtilityTest
       
       oppList.add(opp2);
       
-      insert oppList;
       
       oppList=[select Opportunity_Id__c from opportunity where id in:oppList];
       
