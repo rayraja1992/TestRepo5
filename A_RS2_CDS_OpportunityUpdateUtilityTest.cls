@@ -198,7 +198,7 @@ public class A_RS2_CDS_OpportunityUpdateUtilityTest
         String oppautono = oppList[0].Opportunity_Id__c;
         String opp1autono = oppList[1].Opportunity_Id__c; 
         
-         List<string> st= new List<string>{oppautono};
+
          ROReq1.childOpportunityID=st;
          ROReq1.masterOpportunityID= opp1autono;         
          RS2_OpportunityUpdate.RS2_OpportunityResponseInfo ROResp1 = new RS2_OpportunityUpdate.RS2_OpportunityResponseInfo();
@@ -206,7 +206,7 @@ public class A_RS2_CDS_OpportunityUpdateUtilityTest
          ROResp1.responseMessage='QWERTY';
          RS2_CDS_OpportunityUpdateUtility.OpportunityUpdate(ROReq1,ROResp1);
      }catch(Exception e){
-         System.debug('Error in Test Method');
+
      }
     }
   
