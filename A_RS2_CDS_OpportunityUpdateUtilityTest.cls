@@ -32,7 +32,6 @@ public class A_RS2_CDS_OpportunityUpdateUtilityTest
       String opp1autono = oppList[1].Opportunity_Id__c; 
       String opp2autono = oppList[2].Opportunity_Id__c;
       
-      List<string> childids = new List<string>{oppautono,opp1autono};
       OppRequestInfo.childOpportunityID = childids; 
       //system.debug('OppRequestInfo.childOpportunityID ...'+OppRequestInfo.childOpportunityID);
       OppRequestInfo.masterOpportunityID = opp2autono;
